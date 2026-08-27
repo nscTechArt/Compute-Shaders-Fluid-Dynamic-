@@ -55,7 +55,7 @@ Every commit must follow **`scope: subject`** on a single line — reference for
 
 - `scope`: short lowercase noun naming the touched area (`shaders`, `scripts`, `scenes`, `docs`, `init`, …).
 - `subject`: concise, starts lowercase, no trailing period.
-- Never merge unrelated changes into one commit; split by scope instead. Older commits predate this convention — don't imitate them. A `.gitmessage` template sits at the repo root and is wired into `git config commit.template`.
+- Never merge unrelated changes into one commit; split by scope instead. Older commits predate this convention — don't imitate them.
 
 ## Testing
 
@@ -65,3 +65,17 @@ No CI and no automated (NUnit) suite despite the Unity Test Framework package be
 
 - `README.md` — especially "Adding New Things and Architecture" and "Improving Performance".
 - The linked blog post ("Gentle Introduction to Fluid Simulation…") explains why the pipeline is ordered advect → forces → diffusion → projection; consult it before reordering pipeline stages.
+
+## Agent skills
+
+### Issue tracker
+
+问题以本地 markdown 文件形式存放在仓库的 `.scratch/<feature-slug>/` 目录下（不走 GitHub Issues）。详见 `docs/agents/issue-tracker.md`。
+
+### Triage labels
+
+使用五个默认分诊标签：`needs-triage`、`needs-info`、`ready-for-agent`、`ready-for-human`、`wontfix`。详见 `docs/agents/triage-labels.md`。
+
+### Domain docs
+
+单上下文布局：仓库根目录一个 `CONTEXT.md`，ADR 位于 `docs/adr/`。详见 `docs/agents/domain.md`。
